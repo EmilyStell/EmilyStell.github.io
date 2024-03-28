@@ -19,6 +19,22 @@ h1 {
     background-color: aqua;
 }
 
+.TitleText{
+    font-family:Work Sans, sans-serif;
+    width:fit-content;
+    text-decoration-line:none;
+    color: black;
+    font-weight: 400;
+    font-size:25px;
+}
+
+.work-sans-<uniquifier> {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
 @media only screen and (max-width:600px){
 
     .TopHeader{height:100px;}
