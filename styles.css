@@ -1,5 +1,18 @@
+:root {
+    --topheadheight: 60px;
+    --white: #ffffff;
+}
+
+
 body {
     margin: 0px;
+    min-height: 100%;
+}
+
+.wrap {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - var(--topheadheight));
 }
 
 h1 {
@@ -8,35 +21,67 @@ h1 {
     font-weight: normal;
 }
 
-.TopHeader
-{
+.topheader {
     position: fixed;
-    width:100%;
-    top:0;
+    width: 100%;
+    top: 0;
     left: 0;
     z-index: 4;
-    height: 50px;
-    background-color: aqua;
+    height: var(--topheadheight);
+    background-color: whitesmoke;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3); /* Syntax: horizontal-offset vertical-offset blur spread color */
+    display: flex;
+    align-items: center;
 }
 
-.TitleText{
-    font-family:Work Sans, sans-serif;
-    width:fit-content;
-    text-decoration-line:none;
+.topbuttonwrap {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    display: grid;
+}
+
+.topbutton {
+    background-color: transparent;
+    padding: 7px;
+    grid-row-start: 1;
+    margin: 10px;
+    height: auto;
+    border-radius: 5px;
+    align-content: center;
+    display: grid;
+}
+
+.toptext {
+    margin: 0px;
+}
+
+.titletext {
+    font-family: Work Sans, sans-serif;
+    width: fit-content;
+    text-decoration-line: none;
     color: black;
     font-weight: 400;
-    font-size:25px;
+    font-size: 25px;
 }
 
-.work-sans-<uniquifier> {
-  font-family: "Work Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
+.main {
+    margin-top: var(--topheadheight);
+    min-height: 100%
 }
 
-@media only screen and (max-width:600px){
 
-    .TopHeader{height:100px;}
-    
+.work-sans {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@media only screen and (max-width:600px) {
+
+    .TopHeader {
+        height: 100px;
     }
+}
