@@ -7,6 +7,7 @@
 body {
     margin: 0px;
     min-height: 100%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .wrap {
@@ -32,14 +33,18 @@ h1 {
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3); /* Syntax: horizontal-offset vertical-offset blur spread color */
     display: flex;
     align-items: center;
+    justify-content:space-between;
 }
 
 .topbuttonwrap {
-    position: absolute;
+
     right: 0px;
     top: 0px;
     height: 100%;
-    display: grid;
+    display: flex;
+    align-items:center;
+    margin-left:auto;
+    margin-right:20px;
 }
 
 .topbutton {
@@ -50,11 +55,16 @@ h1 {
     height: auto;
     border-radius: 5px;
     align-content: center;
-    display: grid;
+    text-decoration-line: none;
+    color: slategray;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+    font-display:
 }
 
 .toptext {
     margin: 0px;
+  
 }
 
 .titletext {
@@ -64,11 +74,54 @@ h1 {
     color: black;
     font-weight: 400;
     font-size: 25px;
+    margin-left:20px;
 }
 
 .main {
     margin-top: var(--topheadheight);
     min-height: 100%
+}
+
+.banner{
+    width:100%;
+    height:250px;
+    background-color:azure;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.bannertext{
+    font-family: Work Sans, sans-serif;
+    font-size:50px;
+    color:lightgray;
+}
+
+.submenu{
+    margin-left:20px;
+    margin-right:20px;
+    margin-top:40px;
+    margin-bottom:40px;
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+}
+
+.subbutton{
+    max-block-size:70px;
+    resize:block;
+    block-size:auto;
+}
+
+.content{
+    background-color:azure;
+    min-height:100px;
+}
+
+.noselect {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 
