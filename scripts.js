@@ -36,5 +36,6 @@ function getthumb(parent) {
 
     const img = document.createElement("img");
     img.src = './Posts/Test/wallywink2.jpg';
+    img.setAttribute("class", "thumb");
     parent.appendChild(img);
 }
