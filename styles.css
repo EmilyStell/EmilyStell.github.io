@@ -136,6 +136,8 @@ h1 {
     width:auto;
     height:300px;
     background-color:transparent;
+
+    text-decoration-line: none;
 }
 
 .thumb {
