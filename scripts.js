@@ -29,6 +29,7 @@ function hello()
             getthumb(newrect);
         }
     }
+    getposts()
     
 }
 
@@ -38,4 +39,50 @@ function getthumb(parent) {
     img.src = './Posts/Test/wallywink2.jpg';
     img.setAttribute("class", "thumb");
     parent.appendChild(img);
+}
+
+async function getposts() {
+
+    const path = "./Posts/Test/wallywink2.jpg";
+    alert("1"); 
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "./Posts", true);
+    xhttp.send();
+    var res = xhttp.responseText;
+    var parser = new DOMParser();
+    var out = parser.parseFromString(res);
+
+    alert(out);
+
+    var x = await (fetch('./styles.css', ))
+    var y = await x.text;
+
+  /*  alert(y);
+
+    fetch("styles.css")
+        .then((response) => {
+            alert(response.text);
+        })
+    
+
+    alert("2");*/
+  /*  
+    var post;
+    alert("ok");
+    var fs = require('fs');
+    alert("2");
+    var files = fs.readdirSync('../Posts');
+    
+    alert(files[0]);
+    
+    post = fetch(path)
+        .then(x => x.text)
+        .then(alert(x.text));
+    alert(x.text);
+
+
+    alert(post.document.querySelector(".mainimg"));*/
+
+
 }
