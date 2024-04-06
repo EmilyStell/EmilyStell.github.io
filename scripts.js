@@ -51,12 +51,13 @@ async function getposts() {
     xhttp.send();
     var res = xhttp.responseText;
     var parser = new DOMParser();
-    var out = parser.parseFromString(res);
+    var out = parser.parseFromString(res, "text/html");
 
-    alert(out);
-
+    console.log(res);
+    alert("2");
+/*
     var x = await (fetch('./styles.css', ))
-    var y = await x.text;
+    var y = await x.text;*/
 
   /*  alert(y);
 
