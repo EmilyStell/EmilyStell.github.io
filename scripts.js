@@ -1,5 +1,4 @@
 
-
 document.addEventListener("DOMContentLoaded", loaded)
 {  
 
@@ -26,7 +25,7 @@ async function popgrid(grid, maxentries) {
         var newrect = document.createElement("a");
         newrect.setAttribute("class", "genrect");
         const path = "./Posts/" + postdata[i].url;
-        console.log(path);
+        /*console.log(path);*/
         newrect.setAttribute("href", path);
         grid.appendChild(newrect);
 
@@ -38,10 +37,6 @@ async function popgrid(grid, maxentries) {
 
         const title = document.createTextNode(postdata[i].title);
         newrect.appendChild(title);
-
-    /*    getthumb(path, newrect);*/
-/*
-        getthumbtest(newrect);*/
     }
 
 }
@@ -78,9 +73,6 @@ async function getthumbtest(parent) {
          return postdata;
      } catch (error) {
          console.log("err");
-  
-
-        
-        
+ 
      }
 }
