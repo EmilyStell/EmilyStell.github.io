@@ -121,44 +121,53 @@ h1 {
 */ min-height: 100px;
     padding-left: calc(5px + 10vw);
     padding-right: calc(5px + 10vw);
-    align-items:center;
+    align-items: center;
     flex-direction: column;
+    margin-bottom: 50px;
 }
 
 .procontainer {
     background-color: whitesmoke;
     /*    width:80%;*/
-    padding: 20px;
+    padding: 30px;
 
     display: grid;
     align-items: center;
     justify-items: center;
-    grid-template-columns: minmax(20%, auto) auto;
+    grid-template-columns: minmax(50px, 100px) fit-content(800px);
     row-gap: 5px;
     grid-template-rows: repeat(3, 1fr auto);
 }
 .gamecircle {
-    margin:10%;
-    background-color:white;
-/*    min-height:50px;
+    margin: 10px;
+    background-color: lightgray;
+    /*    min-height:50px;
     min-width:50px;*/
-    aspect-ratio:1;
-    border-radius:50%;
-    border: 2px solid;
-    box-sizing:border-box;
+
+    width: 100%;
+
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 0px solid;
+    box-sizing: border-box;
     grid-column: 1;
-    width:100%;
- /*   height:100%;
-    width:stretch;*/
+}
+.gameimg {
+    /*   mask-image:radial-gradient(circle, black 50%, white 50%);*/
+    height:100%;
+    
+
+   
+
 }
 .gametitle {
-    font-size:1.5em;
-    margin-bottom:.3em;
-    color:slategray;
+    font-size: 1.4em;
+    margin-bottom: .3em;
+    color: #303030
 }
 .gameinfo {
     grid-column:2;
-    color:lightgray;
+    color:slategray;
     justify-self:left;
     margin-left:15px;
     margin-right:15px;
