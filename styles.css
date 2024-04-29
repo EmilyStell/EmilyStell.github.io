@@ -105,13 +105,26 @@ h1 {
     margin-bottom:20px;
     display:flex;
     align-items:center;
-    justify-content:space-evenly;
+    justify-content:center;
+    gap:30px;
 }
 
 .subbutton{
-    max-block-size:70px;
-    resize:block;
-    block-size:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:150px;
+    text-align:center;
+
+ /*   background-color:grey;*/
+    padding:20px;
+}
+.subbutton:hover{
+  /*  background-color:lightgray;*/
+    font-weight:bold;
+}
+.subactive{
+    background-color:gray;
 }
 
 .content {
@@ -136,17 +149,16 @@ h1 {
     justify-items: center;
     grid-template-columns: minmax(50px, 100px) fit-content(800px);
     row-gap: 5px;
-    grid-template-rows: repeat(3, 1fr auto);
+  /*  grid-template-rows: repeat(3, 1fr auto);*/
 }
 .gamecircle {
     margin: 10px;
     background-color: lightgray;
-    /*    min-height:50px;
-    min-width:50px;*/
-
-    width: 100%;
 
     aspect-ratio: 1;
+    width: 80%;
+    height: 0;
+    padding-bottom:80%;
     border-radius: 50%;
     border: 0px solid;
     box-sizing: border-box;
@@ -154,7 +166,7 @@ h1 {
 }
 .gameimg {
     /*   mask-image:radial-gradient(circle, black 50%, white 50%);*/
-    height:100%;
+    width:100%;
     
 
    

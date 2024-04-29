@@ -1,13 +1,65 @@
+const maxentries = 4;
+let categories;
+let buttons;
+let activetab = -1;
+
 
 document.addEventListener("DOMContentLoaded", loaded)
-{  
-
+{
     
 }
 
-const maxentries = 4;
+
+
+function buttonActive(button) {
+
+    button.classList.add('subactive');
+}
+
+function showContent(id) {
+
+    if (activetab == id)
+        return;
+
+    for (i = 0; i < categories.length; i++) {
+
+        if (i == id)
+            categories[i].style.display = "";
+        else
+            categories[i].style.display = "none";
+    }
+
+    for (i = 0; i < buttons.length; i++) {
+
+        if (i == id)
+            buttons[i].classList.add('subactive');
+        else
+            buttons[i].classList.remove('subactive');
+    }
+    
+}
+
+
+
 function loaded()
 {
+    categories = document.querySelector(".content").children;
+    buttons = document.getElementsByClassName("subbutton");
+    for (i = 0; i < buttons.length; i++) {
+
+        let index = i;
+        buttons[i].addEventListener('click', function (event) {
+            /*console.log(event.target);*/
+ /*           let clicked = event.target;
+            buttonActive(clicked);*/
+/*            this.classList.add('subactive');*/
+ /*           event.target.classList.add('subactive');*/
+            showContent(index);
+        });
+    }
+
+    showContent(0);
+    
     const grid = document.querySelector(".gallerygrid");
 
     if (grid)
