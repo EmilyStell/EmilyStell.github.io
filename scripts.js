@@ -1,7 +1,7 @@
 const maxentries = 4;
 let categories;
 let buttons;
-let activetab = -1;
+let activetab;
 
 
 document.addEventListener("DOMContentLoaded", loaded)
@@ -18,9 +18,6 @@ function buttonActive(button) {
 
 function showContent(id) {
 
-    if (activetab == id)
-        return;
-
     for (i = 0; i < categories.length; i++) {
 
         if (i == id)
@@ -28,7 +25,6 @@ function showContent(id) {
         else
             categories[i].style.display = "none";
     }
-
     for (i = 0; i < buttons.length; i++) {
 
         if (i == id)
@@ -36,7 +32,8 @@ function showContent(id) {
         else
             buttons[i].classList.remove('subactive');
     }
-    
+    activetab = id;
+    sessionStorage.setItem('activeTab', id);
 }
 
 
@@ -58,7 +55,12 @@ function loaded()
         });
     }
 
-    showContent(0);
+    activetab = sessionStorage.getItem('activeTab');
+    if (activetab)
+        showContent(activetab);
+    else
+        showContent(0);
+        
     
     const grid = document.querySelector(".gallerygrid");
 
