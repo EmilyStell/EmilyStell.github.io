@@ -93,8 +93,9 @@ b{
 }
 .postcontent {
 	display:grid;
-	margin-top:20px;
+	margin:20px;
 	margin-bottom:50px;
+	overflow-wrap:anywhere;
 }
 
 .caption{
