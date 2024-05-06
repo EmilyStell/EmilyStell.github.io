@@ -89,8 +89,12 @@ async function popgrid(grid, maxentries) {
         img.setAttribute("class", "thumb");
         newrect.appendChild(img);
 
-        const title = document.createTextNode(postdata[i].title);
+
+        const title = document.createElement("div");
+        const titletext =  document.createTextNode(postdata[i].title);
+        title.setAttribute("class", "posttitle");
         newrect.appendChild(title);
+        title.appendChild(titletext);
     }
 
 }

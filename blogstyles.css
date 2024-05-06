@@ -1,8 +1,9 @@
 
 .mainimg {
 	width: 100%;
+	height:100%;
 	max-width: 1200px;
-	max-height: 45vh;
+	max-height: 50vh;
 	display: flex;
 	justify-content: center;
 	background-color: lightgray;
@@ -10,15 +11,34 @@
 
 
 .mainimg img{
-
+	width:100%;
 	max-width:100%;
 	object-fit: scale-down;
 	object-position: center;
+}
+
+.vidwrapper {
 	
+	aspect-ratio: 16/9;
+	
+}
+.aa {
+	width: 100%;
+	aspect-ratio: 16/9;
+	display: flex;
+	justify-content: center;
+}
+.mainimg iframe {
+	max-height: inherit;
+	max-width: inherit;
+	height: 100%;
+	width: 100%;
+
 }
 
 .blogwrap {
 	width: 100%;
+	height:100%;
 	max-width: 1200px;
 	align-self: center;
 	margin-top: var(--topheadheight);
@@ -31,9 +51,6 @@
 	margin-bottom: 0.67em;
 	margin-left: 0;
 	margin-right: 0;
-
-
-
 }
 
 .postinfo {
