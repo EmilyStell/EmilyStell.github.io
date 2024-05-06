@@ -50,27 +50,99 @@
                 </div>
 
                 <div class="postinfo">
-                    uni project
-                    hello
+                    December 2020 • Uni Project
                 </div>
 
+                <iframe class="gamewidget" frameborder="0" src="https://itch.io/embed/858724" width="552" height="140">
+                    <a href="https://duriavenator.itch.io/hosewoes">Hose Woes by duriavenator</a>
+                </iframe>
                 <div class="posttext">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium aenean pharetra magna ac placerat. Arcu bibendum at varius vel pharetra vel turpis nunc eget. Hendrerit gravida rutrum quisque non tellus orci ac auctor. Ipsum dolor sit amet consectetur adipiscing elit ut aliquam. Duis tristique sollicitudin nibh sit amet commodo nulla. Aliquam ut porttitor leo a. Suspendisse sed nisi lacus sed viverra tellus in. In cursus turpis massa tincidunt dui ut. Accumsan in nisl nisi scelerisque eu ultrices vitae auctor eu. Adipiscing commodo elit at imperdiet dui accumsan sit amet. In dictum non consectetur a erat nam at lectus urna. Tincidunt eget nullam non nisi est sit amet facilisis magna.
 
-                    Sed faucibus turpis in eu mi bibendum neque egestas. Mi ipsum faucibus vitae aliquet. Tristique nulla aliquet enim tortor at auctor urna nunc. Quisque id diam vel quam elementum pulvinar etiam non quam. Eu consequat ac felis donec et. Amet consectetur adipiscing elit ut aliquam purus sit. Proin libero nunc consequat interdum varius sit amet. Maecenas volutpat blandit aliquam etiam erat velit scelerisque in dictum. Adipiscing elit pellentesque habitant morbi. Sed risus pretium quam vulputate dignissim. Suspendisse interdum consectetur libero id faucibus. Mauris vitae ultricies leo integer. Lorem mollis aliquam ut porttitor leo a. Ullamcorper eget nulla facilisi etiam dignissim. Felis donec et odio pellentesque diam volutpat. Interdum consectetur libero id faucibus nisl.
+                    <p> Your garden is overrun with giant vines, snails and bees! Clear away the magic fertiliser that started this mess to make your way back home.</p>
 
-                    Purus non enim praesent elementum. Ipsum faucibus vitae aliquet nec. Fringilla urna porttitor rhoncus dolor purus non enim praesent elementum. Aliquam etiam erat velit scelerisque in dictum. Vulputate sapien nec sagittis aliquam malesuada. Cursus euismod quis viverra nibh cras. Nisl pretium fusce id velit ut tortor. Etiam tempor orci eu lobortis elementum. Cras semper auctor neque vitae. Libero id faucibus nisl tincidunt eget nullam. Nunc pulvinar sapien et ligula. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. Amet massa vitae tortor condimentum lacinia quis vel eros donec. Tristique magna sit amet purus gravida quis blandit turpis. Molestie a iaculis at erat.
+                    <p>Hose woes is a short game created over the course of about 10 weeks for a university project. The assignment was to create a piece that demonstrated expertise or skills in a particular area. I aimed to show skills in:</p>
+                    <ul>
+                        <li><b>Project management and judge of scope,</b> by producing a complete and functional game within the time given</li>
+                        <li><b>Adaptability and range of skills,</b> by making as much as possible from scratch</li>
+                        <li><b>Ability and willingness to learn,</b> by tackling even the aspects of game development I am less confident in like 3D modelling and animation, incorporating learning into the project.</li>
+                        <li><b>Creativity and skill in game design</b></li>
+                    </ul>
+                    <p>
+                        The game was created using Unity, Blender, Photoshop and Substance Designer. All assets, game design and programming are original with the exception of the audio and some snippets of shader code which I needed help from the internet for:<br> <span style="display:inline-block;margin-left:1em;"><a href="https://github.com/przemyslawzaworski/Unity3D-CG-programming/blob/master/area.cs" id="yui_3_17_2_1_1715001909475_334">https://github.com/przemyslawzaworski/Unity3D-CG-programming/blob/master/area.cs</a><br> <a href="https://github.com/przemyslawzaworski/Unity3D-CG-programming/blob/master/area.compute">https://github.com/przemyslawzaworski/Unity3D-CG-programming/blob/master/area.compute</a><br> <a href="https://www.gamedev.net/forums/topic/616327-direct-compute-updown-scaling/">https://www.gamedev.net/forums/topic/616327-direct-compute-updown-scaling/</a></span>
+                        <br />
+                    </p>
+                    <p>These were used as a base and then edited to suit the game’s needs.</p>
+                    <hr />
+                    <h2>Dev Diary</h2>
+                    <strong>Week 1 – 28/9/20 Concept &amp; Prototyping</strong>
+                    <p>The first stage of the project was to come up with a general concept and start prototyping it. I wanted to do these side by side as a kind of safety net – if I found the basics of the concept too difficult to implement, it was early enough to reconsider the concept entirely. This was necessary as I wanted to demonstrate an ability to learn, so it was important the concept was sufficiently different to anything I had done before. </p>
+                    <p>It was suggested to use games form the ‘explorer’ genre as a reference point, so that became my starting point. I thought that the explorer genre was fine, but it would be difficult to orient yourself in a large world without a large number of art assets that could be used to differentiate the areas. Creating this many assets was clearly out of scope, so I considered alternative methods. I wanted to avoid using a minimap as whenever I play a game that uses one I find myself watching the minimap instead of the game. I wanted the player to leave some kind of actual trail in the world, and so having a fog of war effect came to mind. I wanted some way of tying the fog of war to the mechanics of the game rather than being purely visual and so the idea developed from there.</p>
+                    <p>Procedural levels were chosen to make an inevitably short game replayable, and as I have never implemented them before it also strengthened my goal of learning. The narrative came largely from my garden at home where we had more runner beans than we could eat and they just seemed to grow more every day. It was important to me that although the narrative was silly it still made some kind of loose sense, so the characters were given motivations. The antagonist offers you magic fertiliser so he can steal your house in the chaos, and the protagonist is interested in magic fertiliser because they are a rubbish gardener.</p>
+                    <br />
+                    <strong>Week 2 – 2/10/20 Prototype Development</strong>
+                    <p>I spent a long time trying to come up with a way to implement a fog of war myself. I learnt about editing pixels and midpoint circle algorithms and quickly found that changing many pixels in this way gives you a game that runs at less than one frame a second. I thought about using transparent terrain as I hoped it would be more efficient over a larger area, but found that I would need to use a splatmap to control the transparency and that would be a single texture anyway. Eventually I had to admit defeat and in order to move on with the project I had to look it up online. This was how I found the solution of using render textures and shaders, neither of which I was familiar with.</p>
+                    <p>I have a rule that nothing goes into my game unless I know exactly how it works and how to reproduce it in future. This is to ensure that I learn as much as possible through the process. So, it was clear I had to learn the basics of how shaders work and this was definitely a challenge. To tie the fog of war into the mechanics I had to measure the progress of the player some way and all of a sudden I had to get to grips with compute shaders as well. There were many frustrations along the way: shaders that would sample one texture once and then refuse to do any more than that, textures created from scripts that insisted they weren’t read/write enabled (which they apparently always should be) until I asked them nicely 4 times over, numbers that didn’t add up until I realised I was using the wrong filtering method, and scripts that worked fine at the end of the day then somehow broke themselves the next morning.</p>
+                    <p>At some point, I found I had something working and that was the point I had to stop In order to meet the rest of my schedule. The result is that the game is perhaps for intensive than it needs to be. It regularly samples a 4096*4096 texture and does a calculation on each pixel. Whether this affects performance in a meaningful way is something I don’t know, but it could certainly be better. Generally, only the area around the player is changing so it could be improved by remembering the general state of the map, and only sampling and updating an area around the player.</p>
 
-                    Felis donec et odio pellentesque. Ridiculus mus mauris vitae ultricies leo integer malesuada nunc vel. At volutpat diam ut venenatis tellus. Amet volutpat consequat mauris nunc congue nisi. Velit egestas dui id ornare arcu odio ut. Porttitor lacus luctus accumsan tortor posuere ac ut consequat. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Aliquet nibh praesent tristique magna sit amet. Proin libero nunc consequat interdum varius sit amet mattis. Sodales ut etiam sit amet nisl. Ultrices in iaculis nunc sed augue lacus viverra vitae congue. In egestas erat imperdiet sed euismod. Interdum velit euismod in pellentesque massa.
+                    <div class="imagerow">
+                        <img src="hoseimg1.gif" />
+                        <div class="caption">Early Development</div>
+                        <img src="hose2.PNG" />
+                    </div>
+                    <br />
+                    <strong>Week 4 – 19/10/20 Level Generation</strong>
+                    <p>After my shader headache, working on level generation was almost relaxing. As it was my first crack at it, I kept it simple. I drew out the general shape I wanted then came up with the rules to make it. I wanted several long paths rather than a maze-like layout to further help the player stay orientated without a minimap. These paths should start wide then gradually narrow to a point, where the player could find an upgrade. </p>
+                    <p>The algorithm works row by row. For each row it chooses a length and an offset from the last row. The length is determined by a simpler approximation of the gaussian distribution. The closer to the centre the row is, the more likely it is to be ‘wide’ (from the perspective of the whole path) or ‘long’ (from the perspective of the individual row). Length… width… size… the variables quickly got confusing. When I was doing my research, all of the examples I saw seemed to use rejection algorithms to get random values in a particular distribution. I couldn’t figure out why on earth this was a good idea, so mine only picks once. It works out the maximum value at a point on the graph (determined by the row) and then uses a percentage margin of this to set the range for generation.</p>
+                    <p>The whole path generation is then repeated 3 more times, with the final points being translated differently to fit on the four quadrants.</p>
+                    <div class="imagerow">
+                        <img src="rngvalues.PNG" />
+                        <div class="caption">Testing random lengths that get generally smaller. This is before the percentage margin was introduced, so the values run the whole spectrum between 1 and the maximum length.</div>
+                        <img src="levelgen4.PNG" />
+                        <div class="caption">Level Generation showing four quadrants. This is before the offset was implemented, so the paths stay centred.</div>
+                    </div>
+                    <br />
+                    <strong>Week 5 – 26/10/20 Modelling</strong>
+                    <p>In previous games I’ve made, there’s been a deficit in the narrative. This usually means there is one, but it isn’t explained in the game itself, or if it was it was in the form of text descriptions only. I wanted to improve in this area, even if it only meant including some quick pre-rendered cutscenes. Although the camera in-game is quite zoomed out, I made the character model higher fidelity than it needed to be with re-using it for cutscenes in mind.</p>
+                    <p>The models are of a pretty low quality in my opinion. There was a strict time pressure for the project and a lot to achieve in that time, so they were made fairly quickly with little thought to topology and such. For the character model especially I spent a disproportionate amount of time on the head than the body, and this really shows in the final result. The body is very clearly mostly basic shapes and the joints caused some ugly deformation once it came to rigging and animating.</p>
+                    <br />
+                    <strong>Week 7 – 16/11/20 Texturing, Rigging &amp; animation</strong>
+                    <p>I gave myself about one week for texturing, rigging and animation so these were all kept fairly simple. Many of the textures were created using Blender’s node based ‘shader editor’ which can take information from the geometry, and then baked down into a final map. The tree was created in this way, with individual leaves textured by a combination of a gradient and a colour from the leaf’s position. The arrangement was then rendered and the result applied to planes on the tree’s branches. The bark texture is made from a distorted wave texture aligned to curve of each branch, then baked into an image.</p>
+                    <div class="imagerow">
+                        <img src="mc.PNG" />
+                        <div class="caption">Character &amp; Rig</div>
+                        <img src="snail.PNG" />
+                        <div class="caption">Rigged Snail</div>
+                    </div>
+                    <br />
+                    <strong>Week 8 – 23/11/20 Coming Together</strong>
+                    <p>I had a lot of problems implementing all the animations. Blender’s animation system for multiple animations is difficult to use and exporting these was a nightmare. Blender has several different menus for animation and it’s difficult (or impossible) to keep all of them open at once due to sheer screen space. It seemed arbitrary which animations were actually exported into the final file as the button to export ‘all’ animations does not, in fact, export all animations. </p>
+                    <p>
+                        The transitions in Unity are more complex than they need to be. The feet and arms can have several different combinations of animations and in the game all these combinations affect the whole body. I believe it is possible for the legs and arms to have different controllers and animations that only affect those bones, and ideally it should have been set up this way.
+                    </p>
+                    <br />
+                    <strong>Week 10 – 7/12/20 Declared ‘done’</strong>
+                    <p>At some point in every creative project you have to call things done or you’d spend your life never finishing anything, or fixing old projects instead of making new things.</p>
+                    <p>This game’s time has come, though there’s still plenty that could be improved. Some last minute fixes were implemented - the actual levels were upside down from what is shown in the level editor because of the way pixels are read in unity – from the top right. The levels spawn in from the bottom left (as this is where 0,0 should be to any reasonable person).  This was fixed simply by flipping the level preview image. There was no explanation for how to play, so this was added in with a simple text description in the main menu. </p>
+                    <p>There’s still many issues though, including:</p>
+                    <ul>
+                        <li>There are no window, resolution or quality options and the game is generally unoptimised.</li>
+                        <li>Dying in game needs to be completely rethought. Originally I planned to include perma-death to encourage players to try more different levels. Eventually I decided this was too punishing and cut it, but a different death mechanic was never really considered. Currently, the player just spawns back at home. There is no cut to black or any feedback on what has happened and on top of that it can be abused as a way of quickly returning home. When permadeath was cut, far more thought should have gone into this.</li>
+                        <li>The grass doesn’t tile right. The grass was reused from an old Substance designer graph I made. To make it less repetitive three different versions of the graph are used across the map. When I changed the seed to rescatter the flowers for these other versions, the grass was affected also. The graph should have been set up to only randomise the flower scattering and not the grass background so that it tiled across the three different materials.</li>
+                    </ul>
+                    <br />
+                    <h2>Success on goals:</h2>
+                    <strong>Project management and judge of scope</strong>
 
-                    Mattis aliquam faucibus purus in massa. Aliquet lectus proin nibh nisl. Nibh praesent tristique magna sit. Enim nec dui nunc mattis enim ut. Non enim praesent elementum facilisis leo vel fringilla est ullamcorper. Pretium lectus quam id leo in vitae. Eleifend donec pretium vulputate sapien nec sagittis aliquam. Risus feugiat in ante metus. Id velit ut tortor pretium viverra suspendisse potenti nullam. Velit dignissim sodales ut eu sem integer. Ullamcorper a lacus vestibulum sed. Dui faucibus in ornare quam viverra orci sagittis eu. Pellentesque habitant morbi tristique senectus et netus. Egestas diam in arcu cursus. In massa tempor nec feugiat nisl. Amet commodo nulla facilisi nullam vehicula ipsum a. Risus nullam eget felis eget nunc lobortis. Turpis nunc eget lorem dolor sed. Et malesuada fames ac turpis egestas. Mattis rhoncus urna neque viverra justo nec.
+                    <p>I believe this has been quite clearly demonstrated. The game has full menus, a beginning, a story, a gameplay loop and an end. The scale of the project was judged well and what was planned has been delivered.</p>
+                    <strong>Adaptability and range of skills</strong>
+                    <p>Almost all of the entire game has been made from scratch by myself, incorporating many different skills from across different disciplines.</p>
+                    <strong>Ability and willingness to learn</strong>
+                    <p>I have succeeded in incorporating many things that were new to me and I have learnt a lot by doing so. The greatest success was in the programming, where I feel this whole game has been a valuable learning exercise. The animation aspect is something I would normally avoid, but I have made and incorporated functional (although basic) animations. The biggest failure here is in sound. Sound design was almost completely ignored. Although I went into the project determined to do as much as possible, sound continues to be something of an exception. I should not continue to ignore it while claiming there’s no harm in doing things you’re bad at.</p>
+                    <strong>Creativity and skill in game design</strong>
+                    <p>This is somewhat unclear to me. I think much of the game design is creative, and the game overall is successful, but ultimately a lot of the individual mechanics are borrowed from existing genres or tropes. I don’t claim to ever have an original idea, but I like my games to have at least one unusual or interesting aspect. For my tastes, too much of this game feels slightly recycled.</p>
 
 
                 </div>
-            
-            
-            
-            
             </div>
 
         </div>
