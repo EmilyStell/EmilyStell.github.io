@@ -1,10 +1,11 @@
 ﻿[
+
   {
     "title": "Generation Game",
-    "image": "Posts/Uni/thumb2.jpg",
+    "image": "Posts/Uni/genthumb.jpg",
     "url": "Uni/GenerationGame.html",
     "category": "Uni Project",
-    "date": "2021xx"
+    "date": "202105"
   },
 
   {
@@ -17,7 +18,7 @@
 
   {
     "title": "Grabbage",
-    "image": "Posts/Uni/grab.jpg",
+    "image": "Posts/Uni/thumb.jpg",
     "url": "Uni/Grabbage.html",
     "category": "Uni Project",
     "date": "201905"
