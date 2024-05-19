@@ -111,22 +111,31 @@ async function popgrid(grid, maxentries) {
 
 }
 
- function popshortgrid(grid, maxentries) {
+async function popshortgrid(grid, maxentries) {
 
-    for (let i = 0; i < 2; i++) {
+    const postdata = await getshortposts();
+    const entries = Math.min(maxentries, postdata.length);
+
+    for (let i = 0; i < entries; i++) {
         var newrect = document.createElement("div");
-        newrect.setAttribute("class", "genrect");
+        newrect.setAttribute("class", "genrect shortpost");
         grid.appendChild(newrect);
 
-        const bg = document.createElement("div");
-        bg.setAttribute("class", "thumb");
-        newrect.appendChild(bg);
+        const img = document.createElement("img");
+        img.src = postdata[i].thumb;
+        img.setAttribute("class", "shortthumb");
+        newrect.appendChild(img);
 
         const title = document.createElement("div");
-        const titletext = document.createTextNode("hi");
+        const titletext = document.createTextNode(postdata[i].title);
         title.setAttribute("class", "posttitle");
         newrect.appendChild(title);
         title.appendChild(titletext);
+
+        const text = document.createElement("p");
+        text.setAttribute("class", "shortsummary");
+        text.appendChild(document.createTextNode(postdata[i].text));
+        newrect.appendChild(text);
 
     }
 }
@@ -162,7 +171,19 @@ async function getthumbtest(parent) {
 
          return postdata;
      } catch (error) {
-         console.log("err");
+         console.log("oop");
  
      }
+}
+async function getshortposts() {
+
+    try {
+        const response = await fetch("./shortposts.json");
+        const postdata = await response.json();
+
+        return postdata;
+    } catch (error) {
+        console.log("ono");
+
+    }
 }

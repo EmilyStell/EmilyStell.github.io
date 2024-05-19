@@ -41,7 +41,7 @@
 	height:100%;
 	max-width: 1200px;
 	align-self: center;
-	margin-top: var(--topheadheight);
+	margin-top: 54px;
 }
 
 .posttitle {

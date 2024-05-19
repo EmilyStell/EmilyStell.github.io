@@ -14,8 +14,6 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
-
 .wrap {
     position: absolute;
     width: 100%;
@@ -41,7 +39,7 @@ h1 {
     background-color: whitesmoke;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3); /* Syntax: horizontal-offset vertical-offset blur spread color */
     display: flex;
-    
+    align-items:center;
 }
 
 .topbuttonwrap {
@@ -74,11 +72,12 @@ h1 {
 
 .spacer{
     display:flex;
-    padding:10px;
+    padding:0px;
     width:fit-content;
     flex-wrap:wrap;
     align-items:baseline;
-    gap:10px;
+    
+    margin-left:20px;
 }
 
 .subtitle {
@@ -95,12 +94,12 @@ h1 {
     color: black;
     font-weight: 400;
     font-size: 25px;
+    padding-right:20px;
  /*   margin-left:20px;*/
-    grid-column:2;
 }
 
 .main {
-    margin-top: var(--topheadheight);
+    margin-top: 54px;
     min-height: 100%;
     width:100%;
 }
@@ -121,6 +120,12 @@ h1 {
     color: lightgray;
     text-align: center;
     margin-block:0px;
+}
+.sub2 {
+    text-align:center;
+    font-weight:350;
+    color:rgba(1,1,1,0.7);
+    margin:20px;
 }
 
 .submenu{
@@ -148,22 +153,17 @@ h1 {
     padding:20px;
 }
 .subbutton:hover:not(.subactive){
-  /*  background-color:lightgray;*/
     font-weight:bold;
     cursor: pointer;
 }
 .subactive {
-    /* background-color:gray;*/
     color: black;
-  
-    
 }
 
 .content {
     display: flex;
     justify-content: center;
-    /*    background-color:blue;
-*/ min-height: 100px;
+    min-height: 100px;
     padding-left: calc(5px + 10vw);
     padding-right: calc(5px + 10vw);
     align-items: center;
@@ -173,22 +173,21 @@ h1 {
 }
 
 .procontainer {
-    margin:20px;
-    background-color: whitesmoke;
+    margin: 20px;
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0.03);
     /*    width:80%;*/
     padding: 30px;
-
     display: grid;
     align-items: center;
     justify-items: center;
     grid-template-columns: minmax(50px, 100px) fit-content(800px);
     row-gap: 5px;
-  /*  grid-template-rows: repeat(3, 1fr auto);*/
+    /*  grid-template-rows: repeat(3, 1fr auto);*/
 }
 .gamecircle {
     margin: 10px;
     background-color: lightgray;
-
     aspect-ratio: 1;
     width: 80%;
     height: 0;
@@ -200,10 +199,8 @@ h1 {
 }
 .gameimg {
     /*   mask-image:radial-gradient(circle, black 50%, white 50%);*/
-    width:100%;
-    
-
-   
+    width:100%; 
+     
 
 }
 .gametitle {
@@ -218,7 +215,22 @@ h1 {
     margin-left:15px;
     margin-right:15px;
 }
-
+.summary {
+   background-color:rgba(0,0,0,0.03);
+    text-align:center;
+    font-size:1em;
+    color:dimgray;
+    text-wrap:pretty;
+    margin:10px;
+    margin-block:10px;
+    padding:10px;
+    padding-left:30px;
+    padding-right:30px;
+    border-radius:20px;
+    border-style:solid;
+    border-width:1px;
+    border-color:rgba(0, 0, 0, 0.1);
+}
 .gallerygrid {
     padding: 20px;
 /*    width:80%;*/
@@ -240,12 +252,38 @@ h1 {
     text-align: center;
 }
 
+.shortpost {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+    box-sizing:content-box;
+    
+    
+}
+.shortsummary {
+    text-align: left;
+    margin: 15px;
+    margin-top: 5px;
+    margin-bottom:15px;
+    
+}
+.shortthumb {
+    height: 50%;
+    overflow-y:auto;
+    flex-shrink:1;
+    object-fit: cover;
+    margin-bottom:10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
 .posttitle {
-    margin:10px;
+    margin: 10px;
     font-family: Work Sans, sans-serif;
     font-size: 1.2em;
     color: black;
-  
+    flex-shrink: 1;
 }
 
 .thumb {
@@ -281,7 +319,7 @@ h1 {
 @media only screen and (max-width:600px) {
 
     .topheader {
-        grid-auto-flow:column;
+        
     }
     .genrect {
         width: 100%;
