@@ -37,20 +37,21 @@ h1 {
     top: 0;
     left: 0;
     z-index: 4;
-    height: var(--topheadheight);
+    /* height: var(--topheadheight);*/
     background-color: whitesmoke;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3); /* Syntax: horizontal-offset vertical-offset blur spread color */
     display: flex;
-    align-items: center;
-    justify-content:space-between;
+    
 }
 
 .topbuttonwrap {
-    height: 100%;
+    
     display: flex;
     align-items:center;
     margin-left:auto;
+    justify-self:end;
     margin-right:20px;
+    
 }
 
 .topbutton {
@@ -71,6 +72,22 @@ h1 {
     margin: 0px;
 }
 
+.spacer{
+    display:flex;
+    padding:10px;
+    width:fit-content;
+    flex-wrap:wrap;
+    align-items:baseline;
+    gap:10px;
+}
+
+.subtitle {
+    font-family: Work Sans, sans-serif;
+    font-size:16px;
+    font-weight:300;
+    
+}
+
 .titletext {
     font-family: Work Sans, sans-serif;
     width: fit-content;
@@ -78,7 +95,8 @@ h1 {
     color: black;
     font-weight: 400;
     font-size: 25px;
-    margin-left:20px;
+ /*   margin-left:20px;*/
+    grid-column:2;
 }
 
 .main {
@@ -262,8 +280,8 @@ h1 {
 
 @media only screen and (max-width:600px) {
 
-    .TopHeader {
-        height: 100px;
+    .topheader {
+        grid-auto-flow:column;
     }
     .genrect {
         width: 100%;

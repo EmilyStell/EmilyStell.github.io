@@ -61,13 +61,25 @@ function loaded()
     else
         showContent(0);
         
-    
-    const grid = document.querySelector(".gallerygrid");
+    const grid = document.getElementsByClassName("gallerygrid");
+    // const grid = document.querySelector(".gallerygrid");
+
+
 
     if (grid)
     {
-        popgrid(grid, 4);
+        for (let i = 0; i < grid.length; i++) {
+            if (grid[i].classList.contains("short")) {
+                popshortgrid(grid[i], 4);
+        
+            }
+            else
+            popgrid(grid[i], 4);
+        }
     }
+  /*  const shortgrid = document.querySelector(".shortgallerygrid");
+    if (shortgrid)
+        popshortgrid(shortgrid, 4);*/
   
 }
 
@@ -97,6 +109,26 @@ async function popgrid(grid, maxentries) {
         title.appendChild(titletext);
     }
 
+}
+
+ function popshortgrid(grid, maxentries) {
+
+    for (let i = 0; i < 2; i++) {
+        var newrect = document.createElement("div");
+        newrect.setAttribute("class", "genrect");
+        grid.appendChild(newrect);
+
+        const bg = document.createElement("div");
+        bg.setAttribute("class", "thumb");
+        newrect.appendChild(bg);
+
+        const title = document.createElement("div");
+        const titletext = document.createTextNode("hi");
+        title.setAttribute("class", "posttitle");
+        newrect.appendChild(title);
+        title.appendChild(titletext);
+
+    }
 }
 async function getthumb(path, parent) {
 
