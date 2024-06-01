@@ -1,0 +1,13 @@
+<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+	<title/>
+	<mask id="mail">
+		<g data-name="8-Email" id="_8-Email">
+			<rect fill="white" height="100%" id="svg_3" width="100%"/>
+			<path stroke="black" stroke-width="1.2%" d="m6,6m45,7l-42,0a3,3 0 0 0 -3,3l0,28a3,3 0 0 0 3,3l42,0a3,3 0 0 0 3,-3l0,-28a3,3 0 0 0 -3,-3zm-0.64,2l-20.36,15.74l-20.36,-15.74l40.72,0zm-42.36,28.59l0,-27.33l15.41,11.91l-15.41,15.42zm1.41,1.41l15.59,-15.59l4.38,3.39a1,1 0 0 0 1.22,0l4.4,-3.39l15.59,15.59l-41.18,0zm42.59,-1.41l-15.41,-15.42l15.41,-11.91l0,27.33z" id="svg_1"/>
+		</g>
+	</mask>
+	<g class="layer">
+		<title>Layer 1</title>
+		<circle cx="30" cy="30" id="svg_2" mask="url(#mail)" r="30"/>
+	</g>
+</svg>

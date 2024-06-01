@@ -18,16 +18,17 @@
 <body>
     <div class="wrap">
 
+        <!--        Header      -->
         <div class="topheader noselect">
-            <a class="titletext" href="/" title="Home" style="display:block;padding:10px;">
-                hello
-            </a>
+            <div class="spacer">
+                <a class="titletext" href="/" title="Home">
+                    Emily Stell
+                </a>
+                <div class="subtitle">Game Designer</div>
+            </div>
             <div class="topbuttonwrap">
                 <a href="./about.html" title="About" class="topbutton">
                     <p class="toptext">About</p>
-                </a>
-                <a class="topbutton">
-                    <p class=" toptext">hi</p>
                 </a>
             </div>
         </div>
@@ -36,14 +37,14 @@
         <div class="blogwrap">
 
             <div class="mainimg noselect">
-                    <div class="aa">
-                        <div class="vidwrapper">
-                            <iframe width="854" height="480" src="https://www.youtube.com/embed/uDzvAWvTAI8" title="Generation Game Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
-                    </div>            
+                <div class="aa">
+                    <div class="vidwrapper">
+                        <iframe width="854" height="480" src="https://www.youtube.com/embed/uDzvAWvTAI8" title="Generation Game Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
 
-            
+
             <div class="postcontent">
                 <div class="posttitle">
                     The Generation Game
@@ -76,7 +77,7 @@
                     <div class="imagerow">
                         <img src="gen1.jpg" />
                     </div>
-                        
+
                     <p>Games are all primarily mouse driven. You can create a number of entity types that all behave differently. These behaviours are driven by interactions, which consist of one input and a number of results. Each result consists of a result type and a value, as well as an 'other actor' field which only applies to collisions. As well as behaviours, entities all have various properties like colour and whether they are affected by gravity.</p>
 
                     <strong>Inputs:</strong>
@@ -91,7 +92,7 @@
 
                         <li>Collision - Triggered when the entity this is attached to collides with another entity. Can be any other entity (-1) or restricted to a specific one.</li>
                     </ul>
-                    
+
                     <strong>Results:</strong>
                     <ul>
                         <li>Movementx - Moves in the x axis. Value should be a number, positive for right and negative for left.</li>
